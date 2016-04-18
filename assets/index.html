@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css.css">
+	<title>复制组件</title>
+</head>
+<body>
+   <div id="box"></div>
+   <script src="import/jquery.js"></script>
+   <script src="import/jquery.zclip.js"></script>
+   <script src="copy.UI.js"></script>
+   <script>
+       var copyUI = new CopyUI();
+       copyUI.init({value:'aa.bb',$parent: $('#box')})
+       .before(function() {console.log('开始复制');})
+       .after(function() {console.log('复制成功了')})
+       .setValue('测试2');
+   </script>
+</body>
+</html>
